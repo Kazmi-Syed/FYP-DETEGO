@@ -1,0 +1,307 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: #646463;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 101vh;
+  max-height: 101vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.container .upper {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 100vw;
+  padding: 0px 40px;
+  background: #2D2640;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 3px 5px #b5b2b2;
+          box-shadow: 0px 3px 5px #b5b2b2;
+}
+
+.container .upper h1 {
+  font-family: 'DM Serif Display', serif;
+  letter-spacing: 2px;
+  color: #dfdce6;
+}
+
+.container .upper .lefty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .upper .lefty .dp {
+  position: relative;
+  border-radius: 50%;
+}
+
+.container .upper .lefty .dp form {
+  position: relative;
+  top: 50px;
+}
+
+.container .upper .lefty .dp form input {
+  z-index: 44;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  height: 120px;
+  width: 120px;
+  display: none;
+}
+
+.container .upper .lefty .dp form input::-webkit-file-upload-button {
+  z-index: 877889;
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  background: rgba(0, 0, 0, 0.4);
+  color: blanchedalmond;
+  border: none;
+  border-radius: 50%;
+}
+
+.container .upper .lefty .dp form img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid #81cbd4;
+}
+
+.container .upper .lefty .dp form img:hover {
+  z-index: -875;
+  cursor: pointer;
+}
+
+.container .upper .lefty .dp form img:hover + input {
+  display: initial;
+}
+
+.container .upper .lefty .dp form button {
+  position: relative;
+  top: -80px;
+  right: 100px;
+  border: none;
+  padding: 3px 10px;
+  background: #ecf018;
+  color: #302222;
+  font-weight: 700;
+  border-radius: 18px;
+  display: none;
+}
+
+.container .upper .lefty .dp form button:hover, .container .upper .lefty .dp form button:active {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.container .upper .lefty h2 {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: cornsilk;
+}
+
+.container .upper .lefty a {
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 100px;
+  text-align: center;
+  vertical-align: bottom;
+  font-family: sans-serif;
+  color: whitesmoke;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.container .upper .lefty a .ui {
+  font-size: 20px;
+}
+
+.container .upper .lefty a:hover, .container .upper .lefty a:active {
+  background: #06060a;
+}
+
+.container .lower {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 50px 100px;
+  background: #dfdce6;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container .lower h1 {
+  text-align: center;
+}
+
+.container .lower hr {
+  margin: 20px 0px 0px;
+}
+
+.container ::-webkit-scrollbar {
+  display: none;
+}
+
+.container .lower {
+  padding-top: 75px;
+}
+
+.container .lower .doc {
+  color: #f0f0ea;
+  background: #d13974;
+  background: url("/images/class5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 100px;
+}
+
+.container .lower .doc h1#cnam {
+  font-family: 'Roboto' ,sans-serif;
+  letter-spacing: initial;
+  text-align: initial;
+  margin-bottom: 10px;
+}
+
+.container .lower .doc h2 {
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.container .lower .doc #ccode {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-style: italic;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.container .lower .act {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 100px;
+}
+
+.container .lower .act i:hover, .container .lower .act i:active, .container .lower .act i:focus {
+  color: #2D2640;
+}
+
+.container .lower .ann {
+  margin: 50px 100px;
+}
+
+.container .lower .ann a {
+  background: #cec6c1;
+  -webkit-box-shadow: 2px 1px 3px #948686;
+          box-shadow: 2px 1px 3px #948686;
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .lower .ann a .avin i {
+  height: 30px;
+  width: 30px;
+  color: #685f61;
+}
+
+.container .lower .ann a .avin .tex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .lower .ann a .avin .tex h2 {
+  font-size: 16px;
+  color: #352b2b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  display: block;
+}
+
+.container .lower .ann a .avin .tex p {
+  margin-top: 5px;
+}
+
+.container .lower .ann a .tspan {
+  color: darkgreen;
+  text-align: end;
+}
+
+.container .lower .ann a:hover {
+  background: darkgoldenrod;
+}
+/*# sourceMappingURL=student_IC.css.map */

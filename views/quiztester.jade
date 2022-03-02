@@ -1,0 +1,194 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Quiz create
+    link(rel='stylesheet' href='/stylesheets/quiz/questionaire.css')
+    link(rel='stylesheet' href='/stylesheets/fontawesome-free-5.15.4-web/css/all.css')
+    script.
+      var count =0;
+      var whole_quiz = [];
+      function presubmit(a){
+        
+        for (i=0 ; i<count ; i++){
+          t = []
+          for (let [key, value] of Object.entries(whole_quiz[i].O)) {
+            t.push(value);
+          }
+          whole_quiz[i] = {...whole_quiz[i] , O:t}
+        }
+
+      let _w = document.createElement("input");
+      _w.setAttribute('name' , 'quiz'); 
+      console.log(whole_quiz)
+      _w.setAttribute('value' , JSON.stringify(whole_quiz)); 
+      let _f = document.getElementById('qhere')
+      _f.appendChild(_w);  
+      a.setAttribute("onclick" , null)
+      a.innerHTML = "Schedule Quiz"
+      a.setAttribute("type" , 'submit')
+      }
+      function csel(a){
+      let _index = a.parentNode.parentNode.id;
+      _index = _index.match(/(\d+)/)[0][0] - 1;
+      whole_quiz[_index] = {...whole_quiz[_index] , C: a.value}
+      }
+      function question_input(a){
+      let _index = a.parentNode.id;
+      _index = _index.match(/(\d+)/)[0][0] - 1;
+      
+      whole_quiz[_index] = {...whole_quiz[_index] ,Q: a.value};
+      }
+      function mxs_input(a){
+      let _index = a.parentNode.id;
+      _index = _index.match(/(\d+)/)[0][0] - 1;
+      whole_quiz[_index] = {...whole_quiz[_index] ,M: a.value};
+      }
+      /////////////////////////Upper code can be singele function wd 3 conditions
+      function options_input(a){
+      let _index = a.parentNode.parentNode.id;
+      let _optIndex = Array.prototype.indexOf.call(a.parentNode.parentNode.children, a.parentNode) - 5;
+      _index = _index.match(/(\d+)/)[0][0] - 1;
+      a.parentElement.children[0].setAttribute('value' , a.value)
+      whole_quiz[_index].O = {...whole_quiz[_index].O , [_optIndex]: a.value}
+      // whole_quiz[_index].O[_optIndex] = a.value
+      }
+      window.addEventListener('blur' , function(){console.log('TAb changed')});
+      window.addEventListener('focus' , function(){console.log('TAb Returned')});
+      function removeQ(f){
+      let  i = Number(f.parentElement.id[3]);
+      document.getElementById('equ' + i).remove()
+      whole_quiz.splice(i-1 , 1)
+      i+=1;
+      while(i<=count){
+      document.getElementById('equ' + i).setAttribute('id' ,'equ' + (i-1));
+      document.getElementById('qhequ' + i).setAttribute('id' ,'qhequ' + (i-1))
+      document.getElementById('qhequ' + (i-1)).innerHTML = 'Q'+ (i-1)
+      i++;
+      }
+      count -= 1;
+      }
+      function rmopt(a){
+      let _index = a.parentNode.parentNode.id;
+      _index = _index.match(/(\d+)/)[0][0] - 1;
+      let _optIndex = Array.prototype.indexOf.call(a.parentNode.parentNode.children, a.parentNode) - 5;
+      a.parentNode.remove();
+      while(_optIndex<Math.max(... Object.keys(whole_quiz[0].O))){
+      // if ( ! whole_quiz[_index].O[_optIndex+1] == null || undefined )
+      whole_quiz[_index].O[_optIndex] = whole_quiz[_index].O[++_optIndex];
+      }
+      delete whole_quiz[_index].O[_optIndex];
+      }
+      function addoptions(a){
+      let _e = document.getElementById(a.parentElement.id);
+      let _o = document.createElement('input');
+      let _c = document.createElement('i');
+      let _i = document.createElement('input')
+      _i.setAttribute('type' , 'radio')
+      let _optname = "O"+a.parentElement.id
+      _i.setAttribute('name' ,_optname)
+      _i.setAttribute('onclick' , 'csel(this)')
+      _o.setAttribute('placeholder' , 'option Here');
+      _o.setAttribute('class' , 'opt');
+      _o.setAttribute('onchange' , 'options_input(this)');
+      _o.setAttribute('oninput' , 'options_input(this)');
+      _o.setAttribute('onpaste' , 'options_input(this)');
+      _c.setAttribute('class' , 'fas fa-times');
+      _c.setAttribute('onclick' , 'rmopt(this)');
+      let _in = document.createElement('div');
+      _in.setAttribute('class' , 'optinp');
+      _in.appendChild(_i);
+      _in.appendChild(_o);
+      _in.appendChild(_c);
+      _e.appendChild(_in);
+      }
+      function addQ(){
+      var _x = document.getElementById('qhere');
+      var _t = document.createElement('div');
+      _t.setAttribute('id' , 'equ'+ ++count);
+      _t.setAttribute('class' , 'question');
+      var _g = document.createElement('input');
+      _g.setAttribute('placeholder' , 'Question Statement Here');
+      _g.setAttribute('onchange' , 'question_input(this)');
+      _g.setAttribute('oninput' , 'question_input(this)');
+      _g.setAttribute('onpaste' , 'question_input(this)');
+      var _h =  document.createElement('button');
+      _h.setAttribute('class' , 'gb');
+      _h.setAttribute('type' , 'button');
+      _h.setAttribute('onclick' , 'addoptions(this)');
+      _h.appendChild(document.createTextNode('Add Options'));
+      var _i =  document.createElement('button');
+      _i.setAttribute('onclick' , 'removeQ(this)');
+      _i.setAttribute('type' , 'button');
+      _i.setAttribute('class' , 'rb');
+      _i.appendChild(document.createTextNode('Remove'));
+      let _m = document.createElement('input');
+      _m.setAttribute('type' , 'number');
+      _m.setAttribute('class' , 'mxs');
+      _m.setAttribute('placeholder' , 'Marks');
+      _m.setAttribute('onchange' , 'mxs_input(this)');
+      _m.setAttribute('oninput' , 'mxs_input(this)');
+      _m.setAttribute('onpaste' , 'mxs_input(this)');
+      _m.setAttribute('id' , 'qmx'+count);
+      let _u = document.createElement('h3');
+      _u.innerHTML = 'Q' +  (count);
+      _u.setAttribute('id' , 'qhequ' + (count));
+      _t.appendChild(_u);
+      _t.appendChild(_g);
+      _t.appendChild(_m);
+      _t.appendChild(_h);
+      _t.appendChild(_i);
+      _x.appendChild(_t)
+      }
+      function ft(){
+      console.log('chnged')
+      }
+    style.
+      *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      }
+      body {
+      min-width : 101vh;
+      padding-top : 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background : #7815;
+      background :#2d2640 ; 
+      }
+      form{
+        margin-top : 40px;
+      }
+
+      #qhere .gb{
+      position: absolute;
+      background: chartreuse;
+      }
+      #qhere .rb{
+      right: 7vw;
+      background: orange;
+      }
+  body
+    h1 Détégo | Schedule Quiz
+    form(action="quizcheck/" , method="post" , id='qst') 
+      label(for='startdate') Starting Date 
+      input#sd(type='date' name='sdat' )
+      br
+      label(for='starttime') Starting Time
+      input#st(type='time' name='stim'  )
+      br
+      #qhere
+      button(type='button' id="adQ" onclick='addQ()') add question
+      br
+      label(for='finishdate') Finishing Date
+      input#fd(type='date' name='fdat'  )
+      br
+      label(for='Finishtime') Finishing Time
+      input#ft(type='time' name='ftim') 
+      br
+      button(onclick='presubmit(this)' id='sbbtn' type="button" ) Schedule Quiz 

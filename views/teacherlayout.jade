@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title #{title}
+    link(rel="shortcut icon", href="/images/favicon.png", type="image/x-icon")
+    link(rel='stylesheet' href='/stylesheets/#{stylefile}.css')
+    link(rel="stylesheet", href="/stylesheets/fontawesome-free-5.15.4-web/css/all.css")
+    script.
+      var disp = function(event) {
+      var image = document.getElementById('tdp');
+      image.src = URL.createObjectURL(event.target.files[0]);
+      document.getElementById("sb").style.display = "initial";
+      };
+  body
+    .container
+      .left
+        .dp
+          form(action='#' method='post')
+            img#tdp(src='/#{imgsrc}' alt='teacher DP' srcset='')
+            input(type='file' accept='image/png , image/jpeg' onchange='disp(event)' required='' placeholder='upload profile pic')
+            button#sb(type='submit') Upload
+        h2 #{tnam}
+        a(href='/home/')
+          | Home
+        a(href='/home/createclass')
+          | Create a Class
+        a(href='/home/logout/')
+          | Logout
+      .right
+        h1 Détégo
+        hr
+        block content
+    

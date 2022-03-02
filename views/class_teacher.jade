@@ -1,0 +1,44 @@
+extends teacherlayout 
+block content
+    .doc
+      h1#cnam #{cass.Name} 
+      h2 #{cass.Details}
+      h3#ccode Class Code : #{cass.Code}
+    .act
+      a(href='assignQuiz/')
+        i.fas.fa-clipboard  Assign Quiz
+      a(href='seestudents')
+        i.fas.fa-user-friends  Students
+      a(href='enrollstudents/')
+        i.fas.fa-users  Enroll Students
+    .ann
+      a(href='#')
+        i.fas.fa-edit
+        h2 Quiz 1 : Chapter 1 (Image Acquisition)
+      a(href='#')
+        i.fas.fa-edit
+        h2 Quiz 2 : Chapter 2 (Fourier Series)
+      a(href='#')
+        i.fas.fa-edit
+        h2 Quiz 3 : Chapter 3 (Fourier Transformation)
+      a(href='#')
+        .avin
+          i.fas.fa-edit
+          .tex
+            h2 Quiz 4 : Chapter 4 (Edge Detection)
+            p Assigned : Jan 21,2022  
+        .tspan
+          p Starts at : 08:14 pm 
+          p Ends at : 9:10 pm
+      a(href='#')
+        i.fas.fa-edit
+        h2 Quiz 5 : Chapter 5 (Convolution)
+      a(href='#')
+        i.fas.fa-edit
+        h2 Quiz 6 : Chapter 6 (Image Acquisition)
+      a(href='#')
+        i.fas.fa-edit
+        h2 Quiz 6 : Chapter 6 (Image Acquisition)
+
+    a(href="/home/#{cass.Code}/delete")
+      button Delete Class  

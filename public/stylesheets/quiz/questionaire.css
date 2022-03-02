@@ -1,0 +1,171 @@
+body {
+  background: purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  color: #fafafa;
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #fafafa;
+}
+
+.question {
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: relative;
+  min-width: 300px;
+  min-height: 250px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  background: cornflowerblue;
+  background: #eef2fa;
+  border: 1px solid grey;
+  -webkit-box-shadow: 1px 2px 6px #837d7d;
+          box-shadow: 1px 2px 6px #837d7d;
+  padding-bottom: 30px;
+}
+
+.question h3 {
+  margin: 30px 0px;
+}
+
+.question input {
+  outline: none;
+  border: 2px solid pink;
+  border-radius: 2rem;
+  display: block;
+  min-width: 200px;
+  width: 40vw;
+  padding: 0.6rem 1rem;
+}
+
+.question input:focus {
+  border: 2px solid green;
+  -webkit-box-shadow: 1px 2px 6px silver;
+          box-shadow: 1px 2px 6px silver;
+}
+
+.question .opt {
+  display: block;
+  margin-top: 20px;
+  max-width: 200px;
+}
+
+.question button {
+  width: 100px;
+  border: none;
+  padding: 10px 0px;
+  position: absolute;
+  bottom: -20px;
+  right: 15vw;
+}
+
+.question button:hover, .question button:active {
+  cursor: pointer;
+  opacity: 0.98;
+}
+
+.question .mxs {
+  margin: 0px;
+  border: none;
+  border-radius: 0px;
+  padding: 4px;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  height: 40px;
+  min-width: 60px;
+  width: 60px;
+  font-weight: 700;
+  text-align: center;
+  background: cornsilk;
+}
+
+.question .optinp input[type='radio'] {
+  min-width: initial;
+  width: initial;
+  margin: 0.4rem;
+  padding: 0px;
+}
+
+.question .optinp input {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.question .optinp i {
+  -webkit-transition: 110ms ease-in;
+  transition: 110ms ease-in;
+}
+
+.question .optinp i:hover, .question .optinp i:active {
+  color: gray;
+  cursor: pointer;
+}
+
+.question .optinp + input[type=radio]:checked {
+  background: gold;
+}
+
+#sbbtn {
+  outline: none;
+  border: none;
+  text-align: center;
+  margin: 20px 0px;
+  border-radius: 3rem;
+  padding: 0.6rem 3rem;
+  font-family: sans-serif;
+  background: yellow;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#sbbtn:hover {
+  cursor: pointer;
+  opacity: 0.92;
+  width: 100%;
+}
+
+#adQ {
+  outline: none;
+  border: none;
+  background: #06060a;
+  text-transform: capitalize;
+  padding: 0.4rem 2rem;
+  color: wheat;
+  margin: 7px 30px;
+  border: 2px solid #06060a;
+}
+
+#adQ:hover {
+  cursor: pointer;
+  opacity: 0.92;
+  border: 2px solid wheat;
+}
+
+label {
+  margin-top: 10px;
+  color: aliceblue;
+}
+
+input {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=questionaire.css.map */

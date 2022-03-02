@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+}
+a{
+    text-decoration: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.megabox{
+    background: #2d2640;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0px;
+        
+    .centralbox{
+        border-radius: 10px;
+        overflow: hidden;
+        background: radial-gradient(#ced65d, #b8a923);
+        width: 700px;
+        height: fit-content;
+        .upperbox{
+            overflow: hidden;
+            position: relative;
+            background: blueviolet;
+            height: 300px;
+            img{
+                
+                width: 100%;
+                height: 100%;
+                object-fit:cover;
+                transition-duration: 180ms;
+            }
+            img:hover{
+                transform: scale(1.2);
+            }
+            h1{
+                z-index: 5;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                background: white;
+                padding: 3px 10px;
+                max-width: 400px;
+                font-family: sans-serif;
+            }
+
+
+        }
+        .lower{
+            position: relative;
+            margin: 30px 0px;
+            .tododo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .todo{
+                    display: flex;
+                    flex-direction: row;
+                    width: 500px;
+                    button{
+                        border: none;
+                        width: 300px;
+                        padding: 1rem 3rem;
+                        margin-bottom: 10px;
+                        font-weight: 700;
+                    }
+                    button:hover,button:active{
+                        background: rgb(148, 13, 76);
+                        color: floralwhite;
+                    }
+
+                }
+                .todo:nth-of-type(2){
+                    .re{
+                        color: dodgerblue;
+                        left: -60px;
+                    }
+                }
+                .todo:nth-of-type(3){
+                    .re{
+                        color: rgb(140, 26, 26);
+                        left: -53px;
+                    }
+                }
+            
+            }
+        .lo{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .re{
+            position: relative;
+            left: -50px;
+            top: 10px;
+            color: green;
+        }
+        button:hover> .re{
+            color: ghostwhite;
+        }
+        
+
+        }
+    }
+}

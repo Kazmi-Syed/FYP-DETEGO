@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Add Student | Détégo
+    link(rel='stylesheet' href='/stylesheets/facultyAddStudents/pop.css')
+    link(rel='stylesheet' href='/stylesheets/fontawesome-free-5.15.4-web/css/all.css')
+  body
+    script.
+      var loadFile = function(event) {
+      var image = document.getElementById('output');
+      image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    .back
+      .box
+        h1
+          | Détégo
+        hr
+        form(action='/home/finishAddStudent' method='post' enctype="multipart/form-data")
+          h2 Student's Details
+          .opto
+            .lefto
+              .fex
+                .infex
+                  label(for='fname') First Name
+                  input(required='' type='text' name='fstnam' placeholder='Dhinchak')
+                  .errmsg At Least 1 letter
+              .fex
+                .infex
+                  label(for='lname') Last Name
+                  input(required='' type='text' name='lstnam' placeholder='Pooja')
+                  .errmsg Must be at least 1 letter 
+              .fex
+                .infex
+                  label(for='roll') Student ID
+                  input(required='' type='text' name='ID' placeholder='180369')
+                  .errmsg Must be a Unique Number
+            .righto
+              img#output(src='' alt='')
+              input#fg(type='file' required='' name='imginaryfile' onchange='loadFile(event)')
+              .secto
+                .becto
+                  select#gender(name='gender')
+                    option(value='M') Male
+                    option(value='F') Female
+                    option(value='O') Others
+                  select#batch(name='batch')
+                    option(value='2018') 2018
+                    option(value='2019') 2019
+                    option(value='2020') 2020
+                    option(value='2021') 2021
+                  select#dep(name='dep')
+                    option(value='BBA') BBA
+                    option(value='BCS') BCS
+                    option(value='ECE') ECE
+                    option(value='BA') BA
+          button(type='submit') Add Student
+          a.HomeGo(href='/')
+            | Home 
+            icon.fas.fa-home  
+          a(href='/home/logout') Logout

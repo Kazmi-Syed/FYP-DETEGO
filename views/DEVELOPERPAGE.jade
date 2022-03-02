@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    title Developer's PAge | Detego
+    link(rel='stylesheet', href='/stylesheets/facult.css')
+          
+  body
+    main 
+        .left 
+            h1 DETEGO 
+            h2 Authorized Personnel Only   
+        .right 
+            form(action="/devcheck" , method="post") 
+                h2 Sign In
+                input(type="email", name="DEV_ID" , placeholder="Login ID")
+                input(type="password", name="DEV_SEC" , placeholder="password")
+                button(type="submit")  Login

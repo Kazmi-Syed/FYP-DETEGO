@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  .container 
+    .continerleft 
+      h1 D&eacute;t&eacute;go 
+      p Smart invigilation system to reduce the suspecious activities during online exams. Being ethical during online exams.
+    .containerright
+      form(action="/home/", method="post") 
+        h2 Sign In
+        label(for="mail") Email Address 
+        input(type="text" name="uname" placeholder="Email@type.facultyname.com")
+        br
+        label(for="mail") Password 
+        input(type="password" name="pcode" placeholder="Secret Key")
+        br
+        button(type="submit")  Log in
+        p #{warning}
+
+
+  h1= title
+  p This is a tutorial #{title}
+  p What would you do neXt
+  p nothing special
+  p All Thanks to #{Developer}
+  form(action="/home/", method="post") 
+     
+    label(for="mail") Email Address 
+    input(type="text" name="uname" placeholder="Email@type.facultyname.com")
+    br
+    label(for="mail") Password 
+    input(type="password" name="pcode" placeholder="Secret Key")
+    br
+    button(type="submit")  Enter
+  

@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet' href='/stylesheets/faculty/fachome.css')
+    link(rel='stylesheet' href='/stylesheets/fontawesome-free-5.15.4-web/css/all.css')
+  body
+    .megabox
+      .centralbox
+        .upperbox
+          img(src=imguni alt='')
+          h1 #{uniName}
+        .lower
+          .tododo
+            .todo
+              a(href='/home/addstudentpage')
+                button.butt Add Student
+                i#re.fas.fa-user-graduate.fa-2x.re
+            .todo
+              a(href='/home/addTeacherpage')
+                button.butt Add Teacher
+                i#re.fas.fa-chalkboard-teacher.fa-2x.re
+            .todo
+              button.butt Update Student
+              i#re.fas.fa-graduation-cap.fa-2x.re
+            .todo
+              button.butt Update Teacher
+              i#re.fad.fa-chalkboard-teacher.fa-2x.re
+          .lo
+            a(href='/home/logout') Logout

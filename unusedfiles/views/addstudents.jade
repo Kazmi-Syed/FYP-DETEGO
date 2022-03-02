@@ -1,0 +1,37 @@
+extends facultyhead 
+block content 
+    .center 
+        img(src=imguni, alt="uni bg",)
+    h1 #{uniName}
+
+    
+    button view Students count
+    button view Teachers count
+    button Add student
+    button Add Teacher
+    button Reset a students password by taking his mail 
+    
+
+    form(action="/addedresult", method="post") 
+        input(type="text" name="first" placeholder="First Name")
+        input(type="text" name="last" placeholder="Last Name")
+        input(type="text" name="mail" placeholder="Mail ")
+        input(type="text" name="pwd" placeholder="password ")
+        input(type="number" name="roll" placeholder="His id")
+        button(type="submit") Add Student
+    
+    main 
+        .left 
+            h1 #{fn} 
+            p  students Rnrolled : 0
+            p teachers : 0
+            p #{fn}
+        .right 
+            button Add Student 
+            button Add Teacher 
+            br
+            button Remove Student
+            button Remove Teacher 
+            br
+            button View All Students 
+            button View All Teachers

@@ -1,0 +1,7 @@
+extends teacherlayout 
+block content 
+    h2 Create class PAge
+    form(action="/home/classcreated", method = "post")
+        input(type="text" name="cln" placeholder="Class Name")
+        input(type="text" name="btd" placeholder="Class Details")
+        button(type="submit") Create Class 

@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Add Student
+    link(rel='stylesheet' href='/stylesheets/facultyAddStudents/pop.css')
+    link(rel='stylesheet' href='/stylesheets/fontawesome-free-5.15.4-web/css/all.css')
+  body
+    script.
+      var loadFile = function(event) {
+      var image = document.getElementById('output');
+      image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    .back
+      .box
+        h1
+          | Détégo
+        hr
+        form(action='/home/finishAddTeacher' method='post' enctype="multipart/form-data")
+          h2 Teacher's Details
+          .opto
+            .lefto
+              .fex
+                .infex
+                  label(for='fname') First Name
+                  input(required='' type='text' name='empfstnam' placeholder='Dhinchak')
+                  .errmsg At Least 1 letter
+              .fex
+                .infex
+                  label(for='lname') Last Name
+                  input(required='' type='text' name='emplstnam' placeholder='Pooja')
+                  .errmsg Must be at least 1 letter 
+              .fex
+                .infex
+                  label(for='roll') Employee ID
+                  input(required='' type='text' name='ID' placeholder='180369')
+                  .errmsg Must be a Unique Number
+            .righto
+              img#output(src='' alt='')
+              input#fg(type='file' required='' name='empimginaryfile' onchange='loadFile(event)')
+              .secto
+                .becto
+                  select#gender(name='empgender')
+                    option(value='M') Male
+                    option(value='F') Female
+                    option(value='O') Others
+                  
+          button(type='submit') Add Employee
+          a.HomeGo(href='/')
+            | Home 
+            icon.fas.fa-home  
+          a(href='/home/logout') Logout

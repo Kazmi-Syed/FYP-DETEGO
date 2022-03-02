@@ -1,0 +1,45 @@
+.container{
+    .right{
+        h2{
+            color: rgb(29, 28, 28);
+
+            text-transform:uppercase;
+            margin: 30px 0px 0px 0px;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            input{
+                border: 2px solid rgb(79, 54, 79);
+                margin: 30px 0px 20px 0px;
+                border-radius: 3rem;
+                padding: 1rem 1rem;
+                width: 35vw;
+                font-size:17px; ;
+
+            }
+            input:nth-of-type(2){
+                font-size: 15px;
+                font-style: italic;
+                width: 42vw;
+            }
+            button{
+                cursor: pointer;
+                color: white;
+                font-weight: 700;
+                background: rgb(58, 49, 49);
+                border-radius: 2rem;
+                max-width: 200px;
+                padding: 1rem 3rem;
+                border: none;
+                
+            }
+            button:hover , button:active{
+                opacity: 0.9;
+            }
+        }
+    }
+}

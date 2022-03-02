@@ -1,0 +1,80 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  min-height: 101vh;
+}
+
+.container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  height: 100%;
+  max-width: 200px;
+  padding: 0px 20px;
+  background: #2D2640;
+}
+
+.container .left img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid #81cbd4;
+}
+
+.container .left img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.container .left h2 {
+  margin-top: 25px;
+  color: cornsilk;
+}
+
+.container .right {
+  background: chartreuse;
+  padding: 100px 15%;
+  width: 100%;
+}
+
+.container .right hr {
+  margin: 20px 0px;
+}
+
+.container .right .classes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container .right .classes .classbox {
+  height: 300px;
+  width: 250px;
+  background: #48aca7;
+}
+/*# sourceMappingURL=tchHome.css.map */

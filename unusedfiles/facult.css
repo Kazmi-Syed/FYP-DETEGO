@@ -1,0 +1,81 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  height: 300px;
+  border-radius: 10px;
+  background: brown;
+}
+
+main .left {
+  width: 50%;
+  text-align: center;
+  padding-top: 60px;
+}
+
+main .left h1 {
+  font-size: 59px;
+  color: #e7e7e7;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+main .left h2 {
+  color: #a8b9af;
+}
+
+main .right {
+  width: 50%;
+  background: cadetblue;
+  border-top-left-radius: 30px 150px;
+  border-bottom-left-radius: 50px 150px;
+  padding: 60px;
+}
+
+main .right form h2 {
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main .right form input {
+  outline: none;
+  display: block;
+  margin-left: 40px;
+  height: 35px;
+  width: 230px;
+  border-radius: 2rem;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+main .right form input:focus {
+  border: 2px solid #d9ff00;
+}
+
+main .right form button {
+  outline: none;
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  background: #6f21ff;
+  border: 2px solid #6f21ff;
+  color: #fafafa;
+  margin-top: 20px;
+  margin-left: 70px;
+  font-weight: 700;
+}
+
+main .right form button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+/*# sourceMappingURL=facult.css.map */

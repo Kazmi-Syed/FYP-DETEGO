@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    script.
+      var disp = function(event) {
+      var image = document.getElementById('tdp');
+      image.src = URL.createObjectURL(event.target.files[0]);
+      document.getElementById("sb").style.display = "initial";
+      };
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title #{title} 
+    link(rel='stylesheet' href='/stylesheets/student/#{stylefile}.css')
+    link(rel='stylesheet' href='/stylesheets/fontawesome-free-5.15.4-web/css/all.css')
+  body
+    .container
+      .upper
+        h1 Détégo
+        .lefty
+          .dp
+            form(action='#' method='post')
+              img#tdp(src='/#{imgsrc}' alt='Student DP' srcset='')
+              input(type='file' accept='image/png , image/jpeg' onchange='disp(event)' required='' placeholder='upload profile pic')
+              button#sb(type='submit') Upload
+          h2 #{tnam}
+          a(href='/home')
+            i.fas.fa-home.ui
+          a(href='/home/joinclass')
+            i.fas.fa-skull-crossbones.ui
+          a(href='/home/logout')
+            i.fas.fa-lock-open.ui
+      .lower
+        block content 
+            if !classis
+                h1#nc No Class exists
+                h1 #{classis}
+            else
+              .classes
+                each cla in classis
+                  a(href='/home/c/#{cla.Code}/')
+                      .classbox
+                          .imgcvr
+                              img(src='/images/brouni.jpg' alt='' srcset='')
+                          .textarea
+                              h3 #{cla.Name} 
+                              h4 #{cla.Details}

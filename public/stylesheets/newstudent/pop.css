@@ -1,0 +1,144 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  max-width: 1600px;
+  background: #2d2640;
+}
+
+h1 {
+  color: #fafafa;
+  margin-bottom: 20px;
+  text-shadow: 3px 2px #a32323;
+}
+
+h2 {
+  font-family: sans-serif;
+}
+
+.back {
+  min-height: 101vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back .box {
+  border-radius: 10px;
+  max-width: 570px;
+  padding: 40px 60px;
+  background: radial-gradient(#9c9238, #f8ec7c);
+}
+
+.back .box form {
+  margin-top: 30px;
+}
+
+.back .box form .fex {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.back .box form .fex .infex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.back .box form .fex .infex .errmsg {
+  margin-top: 5px;
+  margin-left: 22px;
+  color: #a32323;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.back .box form label {
+  margin-left: 10px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: #362727;
+}
+
+.back .box form input {
+  padding: 10px 20px;
+  border-color: unset;
+  border-radius: 2rem;
+  height: 40px;
+  width: 190px;
+  outline: none;
+  border: 2px solid #407422;
+  margin-top: 5px;
+}
+
+.back .box form input:focus {
+  border: 2px solid #00ffd5;
+}
+
+.back .box form input:invalid {
+  border: 2px solid #a32323;
+}
+
+.back .box form input:invalid .errmsg {
+  display: none;
+}
+
+.back .box form button {
+  margin: 10px 30px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid #2d2640;
+  background: #2d2640;
+  color: #fafafa;
+  font-weight: 700;
+}
+
+.back .box form button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.back .box form .secto {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back .box form select {
+  padding: 5px 5px;
+  outline: none;
+  margin-right: 1px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.back .box form select option {
+  background-color: #2d2640;
+}
+/*# sourceMappingURL=pop.css.map */

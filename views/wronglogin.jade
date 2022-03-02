@@ -1,0 +1,13 @@
+extends wlayout 
+block content
+    h1 Detego 
+    form(action="/home", method="post") 
+        label(for="mail") Email Addreess 
+        input(type="text" name= "uname" placeholder="Email@type.facultyname.com")
+        br
+        label(for="mail") Password 
+        input(type="password" name="pcode" placeholder="Secret Key")
+        br
+        button(type="submit")  Enter
+    p.warning The entered email or password is wrong 
+    a.forgot(href="/accountrecovery") forgot password     

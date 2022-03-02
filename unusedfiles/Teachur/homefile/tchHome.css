@@ -1,0 +1,219 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #646463;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  min-height: 101vh;
+  max-height: 101vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  max-width: 200px;
+  padding: 0px 20px;
+  background: #2D2640;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 3px 1px 5px #b5b2b2;
+          box-shadow: 3px 1px 5px #b5b2b2;
+}
+
+.container .left .dp {
+  position: relative;
+  border-radius: 50%;
+}
+
+.container .left .dp form input {
+  z-index: 44;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  display: none;
+}
+
+.container .left .dp form input::-webkit-file-upload-button {
+  z-index: 877889;
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  background: rgba(0, 0, 0, 0.631);
+  color: blanchedalmond;
+  border: none;
+  border-radius: 50%;
+}
+
+.container .left .dp form img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid #81cbd4;
+}
+
+.container .left .dp form img:hover {
+  z-index: -875;
+  cursor: pointer;
+}
+
+.container .left .dp form img:hover + input {
+  display: initial;
+}
+
+.container .left .dp form button {
+  position: relative;
+  bottom: -5px;
+  left: 100px;
+  border: none;
+  padding: 3px 10px;
+  background: #ecf018;
+  color: #302222;
+  font-weight: 700;
+  border-radius: 18px;
+  display: none;
+}
+
+.container .left .dp form button:hover, .container .left .dp form button:active {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.container .left h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: cornsilk;
+}
+
+.container .left a {
+  text-align: center;
+  margin-top: 5px;
+  font-family: sans-serif;
+  color: whitesmoke;
+  background: #06060a;
+  border-radius: 2rem;
+  font-size: 13px;
+  font-weight: 200;
+  padding: 0.6rem 2rem;
+  width: 150px;
+  max-width: 150px;
+}
+
+.container .right {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 50px 100px;
+  background: #dfdce6;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container .right h1 {
+  text-align: center;
+}
+
+.container .right hr {
+  margin: 20px 0px 0px;
+}
+
+.container .right .classes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2fr)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 2fr);
+  row-gap: 30px;
+  padding: 20px 40px;
+}
+
+.container .right .classes #nc {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #646463;
+  margin-top: 200px;
+}
+
+.container .right .classes a {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.container .right .classes a .classbox {
+  color: black;
+  font-family: sans-serif;
+  overflow: hidden;
+  border-radius: 7px;
+  height: 300px;
+  min-width: 250px;
+  background: #dbddcf;
+  -webkit-box-shadow: 2px 2px 5px #797979;
+          box-shadow: 2px 2px 5px #797979;
+}
+
+.container .right .classes a .classbox .imgcvr {
+  overflow: hidden;
+  height: 150px;
+}
+
+.container .right .classes a .classbox .imgcvr img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition-delay: 10ms;
+          transition-delay: 10ms;
+}
+
+.container .right .classes a .classbox .imgcvr img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.container .right .classes a .classbox .textarea {
+  padding: 5px 6px;
+}
+
+.container .right .classes a .classbox .textarea h4 {
+  margin-top: 5px;
+}
+
+.container .right::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=tchHome.css.map */

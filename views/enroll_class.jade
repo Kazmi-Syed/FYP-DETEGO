@@ -1,0 +1,7 @@
+extends teacher_class_layout 
+block content
+    .ann
+        form(action="getenrolldone" method="post")
+            h2 Enroll Student In Class
+            input(type="text" name="stu" placeholder="Students email here") 
+            button(type="submit") Add to class 

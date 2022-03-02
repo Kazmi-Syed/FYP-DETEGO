@@ -1,0 +1,32 @@
+extends teacherlayout 
+block content 
+
+    .container 
+        .left
+            img(src="#{imgsrc}", alt="", srcset="")
+            h2 #{tnam}
+            button
+                a(href="/teacher/createclass") create a class 
+    
+        .right
+            h1 D&eacute;t&eacute;go;
+            hr
+            .classes
+                each t in listo 
+                    .classbox 
+                        a(href=t.joincode) 
+                            h3 #{t} 
+                            h4 Section details
+                    
+
+    h1  Teacher Page 
+    p Teacher name pic and classes
+    button
+        a(href="/teacher/createclass") create a class 
+    button Schedule a Quiz 
+    
+    ol  
+       each t in listo
+        li #{t} 
+
+    h1 #{listo}

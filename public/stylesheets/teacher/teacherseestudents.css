@@ -1,0 +1,271 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: #646463;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  min-height: 101vh;
+  max-height: 101vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  max-width: 200px;
+  padding: 0px 20px;
+  background: #2D2640;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 3px 1px 5px #b5b2b2;
+          box-shadow: 3px 1px 5px #b5b2b2;
+}
+
+.container .left .dp {
+  position: relative;
+  border-radius: 50%;
+}
+
+.container .left .dp form input {
+  z-index: 44;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  display: none;
+}
+
+.container .left .dp form input::-webkit-file-upload-button {
+  z-index: 877889;
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  background: rgba(0, 0, 0, 0.4);
+  color: blanchedalmond;
+  border: none;
+  border-radius: 50%;
+}
+
+.container .left .dp form img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid #81cbd4;
+}
+
+.container .left .dp form img:hover {
+  z-index: -875;
+  cursor: pointer;
+}
+
+.container .left .dp form img:hover + input {
+  display: initial;
+}
+
+.container .left .dp form button {
+  position: relative;
+  bottom: -5px;
+  left: 100px;
+  border: none;
+  padding: 3px 10px;
+  background: #ecf018;
+  color: #302222;
+  font-weight: 700;
+  border-radius: 18px;
+  display: none;
+}
+
+.container .left .dp form button:hover, .container .left .dp form button:active {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.container .left h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: cornsilk;
+}
+
+.container .left a {
+  text-align: center;
+  margin-top: 5px;
+  font-family: sans-serif;
+  color: whitesmoke;
+  background: #06060a;
+  border-radius: 2rem;
+  font-size: 13px;
+  font-weight: 200;
+  padding: 0.6rem 2rem;
+  width: 150px;
+  max-width: 150px;
+}
+
+.container .right {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 50px 100px;
+  background: #dfdce6;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container .right h1 {
+  font-family: 'DM Serif Display', serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.container .right hr {
+  margin: 20px 0px 0px;
+}
+
+.container ::-webkit-scrollbar {
+  display: none;
+}
+
+.container .right .doc {
+  color: #f0f0ea;
+  background: #d13974;
+  background: url("/images/class5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 100px;
+}
+
+.container .right .doc h1#cnam {
+  font-family: 'Roboto' ,sans-serif;
+  letter-spacing: initial;
+  text-align: initial;
+  margin-bottom: 10px;
+}
+
+.container .right .doc h2 {
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.container .right .doc #ccode {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-style: italic;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.container .right .act {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 100px;
+}
+
+.container .right .act i:hover, .container .right .act i:active, .container .right .act i:focus {
+  color: #2D2640;
+}
+
+.container .right .member {
+  margin: 0px 100px;
+}
+
+.container .right .member p {
+  display: initial;
+  position: relative;
+  margin-left: 10px;
+  bottom: 2px;
+}
+
+.container .right .member h2 {
+  display: inline-table;
+  margin: 20px 0px 5px 0px;
+  font-family: 'Roboto';
+}
+
+.container .right .member h3 {
+  font-style: italic;
+  font-family: sans-serif;
+  margin-top: 20px;
+  text-align: center;
+  color: #634c4c;
+}
+
+.container .right .member .tch {
+  margin: 2px 0px;
+  padding: 3px 15px;
+}
+
+.container .right .member .tch p {
+  position: initial;
+  bottom: 0;
+  display: initial;
+  margin-left: 20px;
+}
+
+.container .right .member .tch:hover {
+  cursor: pointer;
+  background: #b5b0b0;
+}
+
+.container .right .member .est {
+  margin: 2px 11px;
+  padding: 3px 2px;
+}
+
+.container .right .member .est p {
+  position: initial;
+  bottom: 0;
+  display: initial;
+  margin-left: 20px;
+}
+
+.container .right .member .est:hover {
+  cursor: pointer;
+  background: #b5b0b0;
+}
+/*# sourceMappingURL=teacherseestudents.css.map */

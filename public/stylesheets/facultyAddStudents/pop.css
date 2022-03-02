@@ -1,0 +1,236 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  max-width: 1600px;
+  background: #2d2640;
+}
+
+h1 {
+  color: #fafafa;
+  margin-bottom: 20px;
+  text-shadow: 3px 2px #37476b;
+}
+
+h2 {
+  font-family: sans-serif;
+}
+
+input {
+  padding: 10px 20px;
+  border-color: unset;
+  border-radius: 2rem;
+  height: 40px;
+  width: 190px;
+  outline: none;
+  border: 2px solid #407422;
+  margin-top: 5px;
+}
+
+input:focus {
+  border: 2px solid #00ffd5;
+}
+
+input:invalid {
+  border: 2px solid #a32323;
+}
+
+::-webkit-file-upload-button {
+  font-family: "PT Sans", Arial, sans-serif;
+  background: #627e7b;
+  background: royalblue;
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+  width: 100%;
+  padding: 8px 40px;
+  border: none;
+}
+
+.back {
+  min-height: 101vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back .box {
+  border-radius: 10px;
+  max-width: 570px;
+  padding: 40px 60px;
+  background: radial-gradient(#9c9238, #f8ec7c);
+}
+
+.back .box form {
+  margin-top: 30px;
+}
+
+.back .box form .opto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.back .box form .opto .righto {
+  margin-left: 50px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.back .box form .opto .righto .secto {
+  margin-top: 40px;
+  width: 250px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back .box form .opto .righto select {
+  padding: 5px 5px;
+  outline: none;
+  margin-right: 1px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.back .box form .opto .righto select option {
+  background-color: #2d2640;
+}
+
+.back .box form .opto .righto img#output {
+  margin-left: 21px;
+  width: 150px;
+  height: 170px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid green;
+  -webkit-box-shadow: 2px 2px 2px #928888;
+          box-shadow: 2px 2px 2px #928888;
+}
+
+.back .box form .opto .righto #fg {
+  border: none;
+  height: initial;
+  padding: 0px;
+  border-radius: 0px;
+}
+
+.back .box form .opto .righto #fg:invalid ~ img#output {
+  border: 2px solid darkred;
+}
+
+.back .box form .opto .righto #fg:invalid {
+  border: none;
+}
+
+.back .box form .opto .righto #fg:invalid + #output {
+  border: 2px solid darkred;
+}
+
+.back .box form .opto .righto #fg:invalid::-webkit-file-upload-button {
+  background: darkred;
+}
+
+.back .box form .opto .righto #fg::-webkit-file-upload-button:hover, .back .box form .opto .righto #fg::-webkit-file-upload-button:active {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.back .box form .opto #fg:active {
+  border: 1px solid darkcyan;
+}
+
+.back .box form .opto .lefto .fex {
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.back .box form .opto .lefto .fex .infex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.back .box form .opto .lefto .fex .infex .errmsg {
+  margin-top: 5px;
+  margin-left: 22px;
+  color: #a32323;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.back .box form .opto .lefto label {
+  margin-left: 10px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: #362727;
+}
+
+.back .box form .opto .lefto input:invalid .errmsg {
+  display: none;
+}
+
+.back .box form button {
+  margin: 10px 30px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid #2d2640;
+  background: #2d2640;
+  color: #fafafa;
+  font-weight: 700;
+}
+
+.back .box form button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.back .box .HomeGo {
+  font-family: Arial;
+  font-weight: 700;
+  border-radius: 2rem;
+  background: #641364;
+  border: 2px solid #641364;
+  color: #fcf6f6;
+  padding: 1rem 2rem;
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+.back .box .HomeGo:hover, .back .box .HomeGo:active {
+  opacity: 0.9;
+}
+/*# sourceMappingURL=pop.css.map */

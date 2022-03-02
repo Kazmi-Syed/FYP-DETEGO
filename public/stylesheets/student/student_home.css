@@ -1,0 +1,280 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: #646463;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 101vh;
+  max-height: 101vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.container .upper {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 100vw;
+  padding: 0px 40px;
+  background: #2D2640;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 3px 5px #b5b2b2;
+          box-shadow: 0px 3px 5px #b5b2b2;
+}
+
+.container .upper h1 {
+  font-family: 'DM Serif Display', serif;
+  letter-spacing: 2px;
+  color: #dfdce6;
+}
+
+.container .upper .lefty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .upper .lefty .dp {
+  position: relative;
+  border-radius: 50%;
+}
+
+.container .upper .lefty .dp form {
+  position: relative;
+  top: 50px;
+}
+
+.container .upper .lefty .dp form input {
+  z-index: 44;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  height: 120px;
+  width: 120px;
+  display: none;
+}
+
+.container .upper .lefty .dp form input::-webkit-file-upload-button {
+  z-index: 877889;
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  background: rgba(0, 0, 0, 0.4);
+  color: blanchedalmond;
+  border: none;
+  border-radius: 50%;
+}
+
+.container .upper .lefty .dp form img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid #81cbd4;
+}
+
+.container .upper .lefty .dp form img:hover {
+  z-index: -875;
+  cursor: pointer;
+}
+
+.container .upper .lefty .dp form img:hover + input {
+  display: initial;
+}
+
+.container .upper .lefty .dp form button {
+  position: relative;
+  top: -80px;
+  right: 100px;
+  border: none;
+  padding: 3px 10px;
+  background: #ecf018;
+  color: #302222;
+  font-weight: 700;
+  border-radius: 18px;
+  display: none;
+}
+
+.container .upper .lefty .dp form button:hover, .container .upper .lefty .dp form button:active {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.container .upper .lefty h2 {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: cornsilk;
+}
+
+.container .upper .lefty a {
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 100px;
+  text-align: center;
+  vertical-align: bottom;
+  font-family: sans-serif;
+  color: whitesmoke;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.container .upper .lefty a .ui {
+  font-size: 20px;
+}
+
+.container .upper .lefty a:hover, .container .upper .lefty a:active {
+  background: #06060a;
+}
+
+.container .lower {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 50px 100px;
+  background: #dfdce6;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container .lower h1 {
+  text-align: center;
+}
+
+.container .lower hr {
+  margin: 20px 0px 0px;
+}
+
+.container ::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  background: #dfdce6;
+}
+
+.container .lower {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 50px 100px;
+  background: #dfdce6;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container .lower h1 {
+  text-align: center;
+}
+
+.container .lower #nc {
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #646463;
+  margin-top: 200px;
+}
+
+.container .lower .classes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (235px)[3];
+      grid-template-columns: repeat(3, 235px);
+  -webkit-column-gap: 10vw;
+          column-gap: 10vw;
+  row-gap: 30px;
+  padding: 20px 40px;
+}
+
+.container .lower .classes a {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.container .lower .classes a .classbox {
+  color: black;
+  font-family: sans-serif;
+  overflow: hidden;
+  border-radius: 7px;
+  height: 300px;
+  min-width: 250px;
+  background: #dbddcf;
+  -webkit-box-shadow: 2px 2px 5px #797979;
+          box-shadow: 2px 2px 5px #797979;
+}
+
+.container .lower .classes a .classbox .imgcvr {
+  overflow: hidden;
+  height: 150px;
+}
+
+.container .lower .classes a .classbox .imgcvr img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition-delay: 10ms;
+          transition-delay: 10ms;
+}
+
+.container .lower .classes a .classbox .imgcvr img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.container .lower .classes a .classbox .textarea {
+  padding: 5px 6px;
+}
+
+.container .lower .classes a .classbox .textarea h4 {
+  margin-top: 5px;
+}
+
+.container .right::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=student_home.css.map */

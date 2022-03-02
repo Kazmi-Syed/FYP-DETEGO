@@ -1,0 +1,106 @@
+@font-face {
+    font-family: Karla;
+    src: url("./fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: DM;
+    src: url("./fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Karla;
+}
+
+html{
+    max-width: 100vw;
+}
+h1{
+    color: rgb(14, 62, 124);
+}
+
+.container{
+    display: flex;
+    max-width: 100vw;
+    min-height: 101vh;
+    background:cadetblue ;
+    justify-content: space-between;
+    overflow: hidden;
+    background: #2d2640;
+    .continerleft{
+        margin: 150px 50px;
+        padding: 50px 50px;
+        border: 5px solid #fafafa;
+        height: fit-content;
+        h1{
+            font-family: DM;
+            color: #fafafa;
+            font-size: 69px;
+            font-weight: 700;
+        }
+        p{
+            font-family: Karla;
+            color: #fafafa;
+            margin-top: 36px;
+            max-width: 500px;
+            line-height: 25px;
+            margin: 22px 0px;
+        }
+    }
+    .containerright{
+        // background: burlywood;
+        background: radial-gradient(rgb(156, 146, 56) , rgb(248, 236, 124));
+        padding: 0px 40px 80px 40px;
+        margin: 70px 100px 0px 0px;
+        height: fit-content;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgb(77, 74, 74);
+        form{
+            h2{
+                color: rgb(26, 27, 70);
+                text-align: center;
+                margin: 70px  0px 50px 0px;
+            }
+            label{
+                color: rgb(23, 32, 61);
+                margin-left: 15px;
+            }
+            input{
+                display: block;
+                outline:none;
+                height: 40px;
+                width: 250px;
+                border-radius: 20px;
+                padding: 0px 8px;
+                margin: 2px 0px 20px 0px;
+                border: 2px solid rgb(15, 63, 65);
+            }
+            input:last-child(){
+                margin: 2px 0px 0px 0px;;
+            }
+            input:focus{
+                border: 2px solid rgb(20, 182, 106);
+            }
+
+            button{
+                padding: 0.6rem 2.5rem;
+                border-radius: 2rem;
+                text-transform: capitalize;
+                //background: rgb(7, 130, 161);
+                background: rgb(15, 63, 65);
+                border: 2px solid rgb(15, 63, 65);
+                margin-top: 20px;
+                color: wheat;
+                font-weight: 700;
+                font-size: 15px;
+            }
+
+            button:hover{
+                cursor: pointer;
+                opacity: 0.9;
+            }
+        }
+    }
+}

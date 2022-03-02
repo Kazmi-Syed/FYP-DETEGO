@@ -1,0 +1,29 @@
+@import "commonT";
+@import "commonTC";
+
+.container{
+    .right{
+        form{
+            h2{
+                color: rgb(41, 36, 44);
+                font-family: sans-serif;
+            }
+            margin: 0px 100px;
+            display: flex;
+            flex-direction: column;
+            input{
+                max-width: 400px;
+                padding: 0.6rem 1rem;
+                border-radius: 20px;
+                margin: 20px 0px;
+            }
+            button{
+                width: 100px;
+                border: none;
+                background: rgb(34, 163, 34);
+                color: white;
+                padding: 0.5rem;
+            }
+        }
+    }
+}

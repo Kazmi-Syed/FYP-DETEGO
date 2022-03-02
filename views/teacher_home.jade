@@ -1,0 +1,16 @@
+extends teacherlayout 
+block content
+  .classes
+      if !classis
+          h1#nc No Class exists
+          h1 #{classis}
+      else
+        each cla in classis
+          a(href='/home/class/#{cla.Code}/')
+              .classbox
+                  .imgcvr
+                      img(src='/images/brouni.jpg' alt='' srcset='')
+                  .textarea
+                      h3 #{cla.Name} 
+                      h4 #{cla.Details} 
+                

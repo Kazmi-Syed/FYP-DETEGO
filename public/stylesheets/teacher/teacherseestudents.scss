@@ -1,0 +1,58 @@
+@import "commonT";
+@import "commonTC";
+.container
+{
+    .right{
+        .member{
+
+            margin: 0px 100px;
+            p{
+                display: initial;
+                position : relative;
+                margin-left: 10px;
+                bottom: 2px;
+            }
+            h2{
+                display: inline-table;
+                margin: 20px 0px 5px 0px;
+                font-family: 'Roboto';
+            }
+            h3{
+                font-style: italic;
+                font-family: sans-serif;
+                margin-top: 20px;
+                text-align: center;
+                color: rgb(99, 76, 76);
+            }
+            .tch{
+                margin: 2px 0px;
+                padding: 3px 15px;
+                p{
+                    position: initial;
+                    bottom: 0;
+                    display: initial;
+                    margin-left: 20px;
+                }
+            }
+            .tch:hover{
+                cursor: pointer;
+                background: rgb(181, 176, 176);
+            }
+            .est{                
+                margin: 2px 11px;
+                padding: 3px 2px;
+                p{
+                    position: initial;
+                    bottom: 0;
+                    display: initial;
+                    margin-left: 20px;
+                }
+            }
+            .est:hover{
+                cursor: pointer;
+                background: rgb(181, 176, 176);
+            }
+
+        }
+    }
+}

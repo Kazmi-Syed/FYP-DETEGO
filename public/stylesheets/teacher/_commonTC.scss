@@ -1,0 +1,40 @@
+.container{
+    .right{
+        .doc{
+            color: rgb(240, 240, 234);
+            background: #d13974;
+            background: url("/images/class5.jpg");
+            background-repeat: no-repeat;
+            background-size:cover ;
+            padding: 20px 100px;
+
+            h1#cnam{
+                font-family: 'Roboto' ,sans-serif;
+            letter-spacing: initial;
+            text-align: initial;
+            margin-bottom: 10px;
+            }
+
+            h2{
+                font-family: sans-serif;
+                font-style: italic;
+            }
+
+            #ccode{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: right;
+                font-style: italic;
+                user-select: text;
+            }
+        }
+        .act{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 100px;
+            i:hover , i:active , i:focus{
+                color: #2D2640;
+            }
+        }
+    }
+}

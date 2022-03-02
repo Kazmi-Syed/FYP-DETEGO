@@ -1,0 +1,18 @@
+extends teacher_class_layout 
+block content
+    .member
+        h2 Teacher 
+        .tch 
+            i.fas.fa-id-badge
+            p #{cass.Teacher}
+        h2 Students
+        if slength == 0
+            h3 No Student Enrolled In Class 
+        else 
+            
+            p (#{slength})
+            each f in cass.Students
+                .est    
+                    i.fas.fa-user
+                    p #{f}  
+    
